@@ -28,18 +28,32 @@
 .gallery-card {
     .card-img {
         img {
-            min-height: 472px;
-            max-height: 472px;
+            aspect-ratio: 294 / 150;
+            max-height: 150px;
+
+            @include md {
+                aspect-ratio: 1;
+                max-height: 280px;
+            }
+            @include lg {
+                min-height: 472px;
+                max-height: 472px;
+                aspect-ratio: 537 / 472;
+            }
         }
     }
 }
 .normal-card {
+    height: 100%;
     .card-img {
         img {
             aspect-ratio: 540 / 233;
+            max-height: 233px;
+            min-height: 233px;
         }
     }
     .card-body {
+        height: 100%;
         border: 1px solid $clr-black;
         border-top: 0;
         padding: 30px;

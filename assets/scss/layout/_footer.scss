@@ -1,6 +1,10 @@
 .top-footer {
-    padding: 60px 0 50px;
+    padding: 40px 0;
     border-top: 1px solid rgba($clr-black, 30%);
+
+    @include md {
+        padding: 60px 0 50px;
+    }
 
     ul {
         display: flex;
@@ -17,6 +21,13 @@
     .footer-menu {
         text-transform: uppercase;
         font-weight: 600;
+        flex-direction: column;
+        gap: 15px;
+
+        @include md {
+            gap: 30px;
+            flex-direction: row;
+        }
 
         a {
             &:hover {
@@ -52,4 +63,19 @@
     padding: 15px 0;
     background-color: $clr-black;
     color: $clr-white;
+    font-size: 12px;
+
+    .site-branding {
+        img {
+            max-width: 84px;
+
+            @include md {
+                max-width: auto;
+            }
+        }
+    }
+
+    @include md {
+        font-size: 14px;
+    }
 }

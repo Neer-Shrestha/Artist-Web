@@ -1,0 +1,33 @@
+.form-control {
+    border-radius: 0;
+    border-color: $clr-black;
+    background-color: transparent;
+
+    &:focus {
+        box-shadow: none;
+        border-color: rgba($clr-primary, 30%);
+        background-color: transparent;
+    }
+}
+textarea.form-control {
+    min-height: 150px;
+    resize: none;
+}
+
+.form-field {
+    label {
+        margin-bottom: 10px;
+    }
+}
+
+.contact-form {
+    background-color: rgba($clr-light, 30%);
+    padding: 30px;
+
+    @include md {
+        padding: 50px;
+    }
+    .form-field {
+        margin-bottom: 20px;
+    }
+}

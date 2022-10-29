@@ -1,16 +1,51 @@
 .site-header {
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 1px solid rgba($clr-black, 30%);
+
+    @include md {
+        padding: 20px 0;
+    }
     .header-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
+    .site-branding {
+        img {
+            max-width: 84px;
+
+            @include md {
+                max-width: unset;
+            }
+        }
+    }
 }
 
 .main-navigation {
+    position: unset;
+
+    .navbar-collapse {
+        position: absolute;
+        top: 77px;
+        left: 0;
+        right: 0;
+        background-color: $clr-white;
+        box-shadow: 0 4px 10px rgba($clr-black, 30%);
+
+        @include md {
+            box-shadow: none;
+            position: unset;
+        }
+    }
     .navbar-nav {
-        gap: 30px;
+        padding: 20px 30px;
+        gap: 10px;
+
+        @include md {
+            padding: 0;
+            gap: 30px;
+        }
         .nav-link {
             font-weight: 600;
             text-transform: uppercase;
@@ -25,6 +60,14 @@
     }
 }
 
+.navbar-toggler {
+    border: 0;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
 .page-header {
     .thumbnail {
         img {
@@ -32,6 +75,10 @@
         }
     }
     .page-title {
-        padding-left: 50px;
+        padding: 20px 0 0 0;
+
+        @include md {
+            padding-left: 50px 0 0 0;
+        }
     }
 }

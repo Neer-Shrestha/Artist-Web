@@ -3,9 +3,9 @@ $primary-font: "Montserrat", sans-serif;
 $secondary-font: "Federo", sans-serif;
 
 // font size
-$fs-h1: 48px;
-$fs-h2: 36px;
-$fs-h3: 24px;
-$fs-h4: 20px;
-$fs-h5: 18px;
-$fs-h6: 16px;
+$fs-h1: clamp(36px, 4vw, 48px);
+$fs-h2: clamp(24px, 4vw, 36px);
+$fs-h3: clamp(20px, 4vw, 24px);
+$fs-h4: clamp(18px, 4vw, 20px);
+$fs-h5: clamp(16px, 4vw, 18px);
+$fs-h6: clamp(14px, 4vw, 16px);
