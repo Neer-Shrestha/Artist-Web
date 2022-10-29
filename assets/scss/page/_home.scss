@@ -1,0 +1,28 @@
+.banner {
+    .thumbnail {
+        img {
+            @include aspect-ratio(635, 450);
+        }
+    }
+    &-content {
+        padding-left: 50px;
+    }
+}
+
+.about {
+    .description {
+        margin-bottom: 40px;
+    }
+
+    .thumbnail {
+        img {
+            @include aspect-ratio(828, 298);
+        }
+    }
+}
+
+.gallery-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 30px;
+}

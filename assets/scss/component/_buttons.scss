@@ -1,0 +1,16 @@
+.btn {
+    font-family: $secondary-font;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 0;
+
+    &-primary {
+        --bs-btn-border-color: #{$clr-primary};
+        --bs-btn-color: #{$clr-primary};
+    }
+    &-outline-dark {
+        --bs-btn-color: #{$clr-black};
+        --bs-btn-border-color: #{$clr-black};
+        --bs-btn-hover-bg: #{$clr-black};
+    }
+}
